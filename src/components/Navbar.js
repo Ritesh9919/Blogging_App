@@ -11,6 +11,7 @@ function Navbar() {
                 <li>
                     <Link to='/create-post'>Create Post</Link>
                 </li>
+                
             </ul>
             <Outlet/>
         </div>

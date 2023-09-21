@@ -24,6 +24,10 @@ function App() {
         {
           path:"/create-post",
           element:<CreatePost/>
+        },
+        {
+          path:"/post/:postId",
+          element:<PostDetail/>
         }
       ],
     },
