@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#nav{
+  display: flex;
+  list-style: none;
+  gap:20px;
+}
+
+.create-post{
+  font-family: serif;
+  width:50%;
+  margin: auto;
+  text-align: center;
+  border:2px solid gray;
+  background-color: cadetblue;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+form{
+  width:100%;
+}
+
+.form-field{
+  display:flex;
+  flex-direction: column;
+
+}
+
+.form-field input {
+  display: block;
+  width:70%;
+  margin: auto;
+  padding:15px 15px;
+  border-radius: 3px;
+  background-color: lightblue;
+  
+}
+
+.form-field label {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.form-field textarea {
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: lightblue;
+  
+}
+
+.submit-btn{
+  
+  display: block;
+  margin: 15px auto 0 auto;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 20px;
+  background-color: green;
+  color:white;
+}

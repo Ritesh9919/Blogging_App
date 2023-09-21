@@ -1,21 +1,37 @@
 
-import {Switch, Route} from 'react-router-dom';
+// import {Switch, Route} from 'react-router-dom';
 // import {CreatePost, PostDetail, Home} from './index';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 import CreatePost from './CreatePost'; 
 import PostDetail from './PostDetail';
 import Home from './Home';
 import Navbar from './Navbar';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Navbar />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path:"/create-post",
+          element:<CreatePost/>
+        }
+      ],
+    },
+  ]);
   
   return (
-    <div className=''>
-      <Navbar/>
-      <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/post/:postId" component={PostDetail} />
-      <Route exact path="/create-post" component={CreatePost} />
-      </Switch>
+    <div>
+    <RouterProvider router={router} />
     </div>
   );
 }
